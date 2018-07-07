@@ -4,12 +4,11 @@
       <title>Image File Preview With Javascript</title>
   </head>
   <body>
-      <input type="file" name="" onchange="onclick('preview', this)">
+      <input type="file" name="" onchange="previewFile('preview', this)">
       <img width="150" src="" id="preview">
 
     
     <script>
-      
       //this script for image file preview
       function previewFile(place,e) {
         var preview = document.getElementById(place);
@@ -24,6 +23,6 @@
           reader.readAsDataURL(file);
         }
       }
-    <script>
+    </script>
   </body>
 </html>
