@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Image File Preview With Javascript</title>
+  </head>
+  <body>
+      <input type="file" name="" onchange="onclick('preview', this)">
+      <img width="150" src="" id="preview">
+
+    
+    <script>
+      
+      //this script for image file preview
+      function previewFile(place,e) {
+        var preview = document.getElementById(place);
+        var file    = e.files[0];
+        var reader  = new FileReader();
+
+        reader.addEventListener("load", function () {
+          preview.src = reader.result;
+        }, false);
+
+        if (file) {
+          reader.readAsDataURL(file);
+        }
+      }
+    <script>
+  </body>
+</html>
