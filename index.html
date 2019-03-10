@@ -11,7 +11,7 @@
     <script>
       //this script for image file preview
       function previewFile(place,e) {
-        var fileName = URL.createObjectURL(e.files[0]),
+        var fileName = URL.createObjectURL(e.files[0]),//this is returning the blob data of file
             preview = document.getElementById(place);
         preview.src = fileName;
       }
