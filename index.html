@@ -11,17 +11,9 @@
     <script>
       //this script for image file preview
       function previewFile(place,e) {
-        var preview = document.getElementById(place);
-        var file    = e.files[0];
-        var reader  = new FileReader();
-
-        reader.addEventListener("load", function () {
-          preview.src = reader.result;
-        }, false);
-
-        if (file) {
-          reader.readAsDataURL(file);
-        }
+        var fileName = URL.createObjectURL(e.files[0]),
+            preview = document.getElementById(place);
+        preview.src = fileName;
       }
     </script>
   </body>
